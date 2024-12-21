@@ -53,7 +53,7 @@ public class VillagerAdapter extends BaseAdapter {
         String name = getItem(position).getName();
         holder.name.setText(name);
 
-        convertView.findViewById(R.id.submitButton).setOnClickListener(new View.OnClickListener() {
+        convertView.findViewById(R.id.deleteButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(parent.getContext())
