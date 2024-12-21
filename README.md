@@ -28,7 +28,7 @@ This app allows users to input a villager's name, age, and address, and store th
 1.  **Prerequisites:**
     -   Android Studio (version 2023.1 or higher)
     -   Java Development Kit (JDK) (version 17 or higher)
-    -   Android SDK (API level 33 or higher)
+    -   Android SDK (API level 24 or higher)
 
 2.  **Cloning the Repository:**
     -   git clone https://github.com/KaitouJap/Falu.git
