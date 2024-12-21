@@ -4,4 +4,8 @@
     <string name="age_hint">Age</string>
     <string name="address_hint">Address</string>
     <string name="submit_button_text">Submit</string>
+    <string name="name_test_data">Ashleigh Mayer</string>
+    <string name="age_test_data">22</string>
+    <string name="address_test_data">1234 Main Street</string>
+    <string name="delete_button_text">Delete</string>
 </resources>
