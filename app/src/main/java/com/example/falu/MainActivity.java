@@ -1,5 +1,6 @@
 package com.example.falu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -71,8 +72,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Villager selectedItem = villagers.get(position);
+                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+                intent.putExtra("name", selectedItem.getName());
+                intent.putExtra("age", selectedItem.getAge());
+                intent.putExtra("address", selectedItem.getAddress());
+                startActivity(intent);
+            }
+        });
     }
 
     public void init(){

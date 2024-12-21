@@ -7,5 +7,11 @@
     <string name="name_test_data">Ashleigh Mayer</string>
     <string name="age_test_data">22</string>
     <string name="address_test_data">1234 Main Street</string>
+    <string name="sex_test_data">Female</string>
     <string name="delete_button_text">Delete</string>
+    <string name="detailsActivity_name_label">Name:</string>
+    <string name="detailsActivity_age_label">Age:</string>
+    <string name="detailsActivity_address_label">Address:</string>
+    <string name="detailsActivity_sex_label">Sex:</string>"
+    <string name="detailsActivity_back_button_text">Back</string>"
 </resources>
