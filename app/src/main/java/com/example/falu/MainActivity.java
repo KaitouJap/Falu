@@ -1,9 +1,12 @@
 package com.example.falu;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +38,38 @@ public class MainActivity extends AppCompatActivity {
         });
 
         init();
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = nameEditText.getText().toString();
+                String age = ageEditText.getText().toString();
+                String address = addressEditText.getText().toString();
+
+                if(name.isEmpty() || age.isEmpty() || address.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                try {
+                    int ageInt = Integer.parseInt(age);
+                    if (ageInt < 0 || ageInt > 100) {
+                        Toast.makeText(MainActivity.this, "Age must be between 0 and 100", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }catch(NumberFormatException e){
+                    Toast.makeText(MainActivity.this, "Age is not a number. Please enter a valid number!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                villagers.add(new Villager(name, Integer.parseInt(age), address));
+                adapter.notifyDataSetChanged();
+
+                nameEditText.setText("");
+                ageEditText.setText("");
+                addressEditText.setText("");
+            }
+        });
 
 
 
